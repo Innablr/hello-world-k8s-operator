@@ -2,7 +2,7 @@ domain: innablr.com.au
 layout:
 - go.kubebuilder.io/v3
 projectName: hello-world-k8s-operator
-repo: githuh.com/innablr/hello-world-k8s-operator
+repo: github.com/innablr/hello-world-k8s-operator
 resources:
 - api:
     crdVersion: v1
@@ -11,6 +11,6 @@ resources:
   domain: innablr.com.au
   group: operator
   kind: HelloWorld
-  path: githuh.com/innablr/hello-world-k8s-operator/api/v1
+  path: github.com/innablr/hello-world-k8s-operator/api/v1
   version: v1
 version: "3"

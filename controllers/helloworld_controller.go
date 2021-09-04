@@ -27,6 +27,8 @@ import (
 	operatorv1 "githuh.com/innablr/hello-world-k8s-operator/api/v1"
 )
 
+var ctrlLog = ctrl.Log.WithName("controller")
+
 // HelloWorldReconciler reconciles a HelloWorld object
 type HelloWorldReconciler struct {
 	client.Client
@@ -49,7 +51,8 @@ type HelloWorldReconciler struct {
 func (r *HelloWorldReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	_ = log.FromContext(ctx)
 
-	// your logic here
+	ctrlLog.Info("hello world! - first kubernetes operator")
+	ctrlLog.Info("this should be fired every time there is a new CRD or update to a crd")
 
 	return ctrl.Result{}, nil
 }
